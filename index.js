@@ -1,12 +1,15 @@
+import dotenv from "dotenv";
 import express from "express";
 import fs from "fs";
 
-
+dotenv.config();
 // creating a server using express //
 const app=express();
 
+
+
 // running server under PORT=>5500 //
-const PORT=5500;
+const PORT=process.env.PORT
 
 app.get("/",(request,response)=>{
 response.send("Hello World")
